@@ -44,7 +44,8 @@ resource "opentelekomcloud_compute_instance_v2" "quickstart" {
   availability_zone = var.availability_zone
   flavor_id         = var.flavor_id
   key_pair          = opentelekomcloud_compute_keypair_v2.quickstart-key.name
-  security_groups   = [opentelekomcloud_networking_secgroup_v2.quickstart-secgroup.id]
+  security_groups   = [opentelekomcloud_networking_secgroup_v2.quickstart-secgroup.name]
+
   network {
     uuid = opentelekomcloud_vpc_subnet_v1.subnet.id
   }

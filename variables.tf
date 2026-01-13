@@ -78,19 +78,22 @@ variable "secgroup_name" {
 }
 
 variable "image_name" {
+  type = string
+  # TODO: figure out a possible list of working values
+  # instead of sniffing -> https://console.otc.t-systems.com/ecm/?region=eu-de#/ecs/createVm
+  # actually: https://console.otc.t-systems.com/ecm/rest/v2/ims/combine/images
+  default     = "Standard_Ubuntu_24.04_amd64_uefi_latest"
   description = "Name of the image"
-  default     = "Standard_Ubuntu_18.04_latest"
-  type        = string
 }
 
 variable "flavor_id" {
+  type = string
+  # for a list of possible values -> https://console.otc.t-systems.com/ecm/?region=eu-de#/ecs/createVm
+  default     = "x1.xlarge.2"
   description = "ID of Flavor"
-  default     = "c3.large.2"
-  type        = string
 }
 
 variable "public_key" {
-  description = "ssh public key to use"
   type        = string
-  default     = ""
+  description = "ssh public key to use"
 }

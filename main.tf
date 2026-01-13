@@ -13,7 +13,7 @@ resource "opentelekomcloud_vpc_subnet_v1" "subnet" {
   vpc_id     = opentelekomcloud_vpc_v1.vpc.id
   cidr       = var.subnet_cidr
   gateway_ip = var.subnet_gateway_ip
-  dns_list   = ["100.125.4.25", "8.8.8.8"]
+  dns_list   = var.dns_list
 }
 
 resource "opentelekomcloud_networking_secgroup_v2" "quickstart-secgroup" {

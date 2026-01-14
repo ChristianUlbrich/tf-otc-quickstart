@@ -60,8 +60,9 @@ Apply Terraform:
     terraform apply
 ```
 
-As _outputs_ you can see the `external_ip` to connect with `ssh_command`. _Security Groups_ are set to **allow** _inbound_ _ICMP_, _SSH_ **and** _outbound traffic_.
+As _outputs_ you can see the `external_ip` to connect with `ssh_command`. _Security Groups_ are **not permissive** at all and all **any traffic** in **any direction**.
 
+> **N.B.** After Terraform has finished, it will take some seconds (~30s), until the VM is actually available.
 
 Destroy Terraform:
 

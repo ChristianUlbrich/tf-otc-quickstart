@@ -32,35 +32,35 @@ With the Quickstart the following resources will created for you:
 * EIP
 * ECS
 
-```
+```bash
 cp terraform.tfvars.example terraform.tfvars
 ```
 
-Adjust access\_key, secret\_key with your own OTC credentials
+Adjust `access_key`, `secret_key` with your own OTC _credentials_.
 
-Adjust public\_key with your own SSH Public Key
+Adjust `public_key` with your own SSH Public Key (`ssh-rsa AAAAB...`)
 
-All other settings are defined in `variables.tf`, you can overwrite them in terraform.tfvars
+All other settings are defined in `variables.tf`, you can overwrite them in `terraform.tfvars`.
 
 Init Terraform:
 
-```
+```bash
     terraform init
 ```
 
 Plan Terraform:
 
-```
+```bash
     terraform plan
 ```
 
 Apply Terraform:
 
-```
+```bash
     terraform apply
 ```
 
-As output you can see the EIP to connect with ssh. Security Groups are almost open to work with your VM.
+As _outputs_ you can see the `external_ip` to connect with `ssh_command`. _Security Groups_ are set to **allow** _inbound_ _ICMP_, _SSH_ **and** _outbound traffic_.
 
 
 Destroy Terraform:

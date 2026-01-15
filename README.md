@@ -1,6 +1,13 @@
 Terraform Open Telekom Cloud Quickstart
 =======================================
 
+Deprecation Warning!
+====================
+
+> **N.B.** This project is **not maintained** anymore and **does not work out-of-the** box with Open Telekom Cloud anymore.
+
+For an **updated** version, that is _actively_ maintained head over to [https://github.com/ChristianUlbrich/tf-otc-quickstart](https://github.com/ChristianUlbrich/tf-otc-quickstart).
+
 Intro
 =====
 

@@ -55,7 +55,7 @@ resource "opentelekomcloud_compute_instance_v2" "quickstart" {
     destination_type      = "volume"
     uuid                  = data.opentelekomcloud_images_image_v2.image.id
     delete_on_termination = true
-    volume_size           = 30
+    volume_size           = var.volume_size
   }
 }
 

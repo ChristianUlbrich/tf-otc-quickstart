@@ -35,6 +35,7 @@ variable "availability_zone" {
   description = "Availability Zone"
 }
 
+# network settings
 variable "vpc_name" {
   type        = string
   default     = "quickstart-vpc"
@@ -77,6 +78,7 @@ variable "secgroup_name" {
   description = "Secgroup name"
 }
 
+# actual VM settings
 variable "image_name" {
   type = string
   # TODO: figure out a possible list of working values
@@ -92,6 +94,13 @@ variable "flavor_id" {
   default     = "x1.xlarge.2"
   description = "ID of Flavor"
 }
+
+variable "volume_size" {
+  type = number
+  default     = 30
+  description = "Size of VM in GB"
+}
+
 
 variable "public_key" {
   type        = string

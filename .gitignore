@@ -13,3 +13,6 @@ terraform.tfvars
 
 # local terraform lock
 .terraform.lock.hcl
+
+# IDE stuff
+.idea
